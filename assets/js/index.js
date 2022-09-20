@@ -1,8 +1,3 @@
-const dotenv = require('dotenv');
-dotenv.config({ path: 'config.env' });
-const HOST = process.env.HOST;
-
-
 // this file handles the jqeury that alerts
 $('#add_user').submit(function(event) {
     alert('Data added successfully!');
@@ -21,7 +16,7 @@ $('#update_user').submit(function(event) {
     let request = {
         // "url": `http://localhost:3000/api/users/${data.id}`,
        // https://crud-user-management-app.herokuapp.com/
-        "url": `${HOST}/api/users/${data.id}`,
+        "url": `https://crud-user-management-app.herokuapp.com/api/users/${data.id}`,
         "method": "PUT",
         "data": data
     };
@@ -41,7 +36,7 @@ if(window.location.pathname == "/") {
         let request = {
             // "url": `http://localhost:3000/api/users/${id}`,
            // https://crud-user-management-app.herokuapp.com/
-            "url": `${HOST}/api/users/${id}`,
+            "url": `https://crud-user-management-app.herokuapp.com/api/users/${id}`,
             "method": "DELETE"
         };
 
